@@ -8,9 +8,9 @@ import{ Quote} from './quote';
 })
 export class AppComponent {
   // title = 'Quotes';
-  quotes: Quote [] =[
-   { quote_id:1,quote_name:'quote1',quote_description: 'description of quote1' },
-   { quote_id:2,quote_name:'quote2',quote_description: 'description of quote2' },
-   { quote_id:1,quote_name:'quote3',quote_description: 'description of quote3' },
-  ];
+  // quotes: Quote [] =[
+  //  { quote_id:1,quote_name:'quote1',quote_description: 'description of quote1' },
+  //  { quote_id:2,quote_name:'quote2',quote_description: 'description of quote2' },
+  //  { quote_id:1,quote_name:'quote3',quote_description: 'description of quote3' },
+  // ];
 }

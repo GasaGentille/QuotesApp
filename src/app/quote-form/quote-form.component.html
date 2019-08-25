@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h2 class="text-center">Create a quote</h2>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-        <!-- <div class="form-row"> -->
+       
         <div class="row">
             <label for="quote">Write your quote:</label>
             <textarea type="text" class="form-control" id="quote" required [(ngModel)]="newQuote.quote_name" name="quote_name"
@@ -20,18 +20,15 @@
             </div>
         </div>
         <div class="row">
-            <label for="submitter">Quote submitter:</label>
+            <label for="submitter">Quote submitted by:</label>
             <input type="text" class="form-control" id="submitter" required [(ngModel)]="newQuote.quote_submitter"
                 name="quote_author" #quote_submitter='ngModel'>
             <div [hidden]="quote_submitter.valid || quote_submitter.pristine" class="alert alert-danger">
                 <p>Write quote submitter</p>
             </div>
 
-        </div>
-
-
-
-        <button class="btn btn-primary" type="submit">Add quote</button>
+        </div> 
+        <button class="btn btn-success" type="submit">Add quote</button>
 
     </form>
 </div>

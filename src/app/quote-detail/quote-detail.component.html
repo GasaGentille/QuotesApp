@@ -1,11 +1,12 @@
-<p>{{quote.quote_author}},{{quote.quote_submitter}},{{quote.completeDate|date}}</p>
+<!-- <p>{{quote.quote_author}},{{quote.quote_submitter}},{{quote.completeDate|date}}</p> -->
+
+<p> Author:{{ quote.quote_author}},
+    Publisher:{{ quote.quote_submitter}},
+    Publication date:{{quote.completeDate|date}}</p>
+
 <p>It past {{quote.completeDate|passDays}} days since this quote created</p>
+<button (click)='quoteUpvotes()'>Upvotes</button>
 <p>{{like}}</p>
+<button (click)='quoteDownvotes()'>Downvotes</button>
 <p>{{dislike}}</p>
-<button (click)= 'quoteComplete(true)'>Delete </button>
-<button (click)= 'quoteUpvotes()'>Upvotes</button>
-<button (click)= 'quoteDownvotes()'>Downvotes</button>
-  
-
-
- 
+<button (click)='quoteComplete(true)'>Delete </button>

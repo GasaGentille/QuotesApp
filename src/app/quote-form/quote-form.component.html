@@ -1,28 +1,37 @@
 <div class="container-fluid">
-    <form #quoteForm='ngForm'>
-        <div class="form-row">
-            <div class="row">
-                <label for="quote">Write your quote:</label>
-                <textarea type="text" class="form-control" id="quote" required [(ngModel)]="newQuote.quote_name" name="quote_name"></textarea>
-
+    <h2 class="text-center">Create a quote</h2>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <!-- <div class="form-row"> -->
+        <div class="row">
+            <label for="quote">Write your quote:</label>
+            <textarea type="text" class="form-control" id="quote" required [(ngModel)]="newQuote.quote_name" name="quote_name"
+                #quote_name='ngModel'></textarea>
+            <div [hidden]="quote_name.valid || quote_name.pristine" class="alert alert-danger">
+                <p>Name is required</p>
             </div>
-            <div class="row">
-                <label for="author">Quote Author:</label>
-                <input type="text" class="form-control " id="author" required>
+        </div>
+        <div class="row">
+            <label for="author">Quote Author:</label>
+            <input type="text" class="form-control " id="author" required [(ngModel)]="newQuote.quote_author"
+                name="quote_author" #quote_author='ngModel'>
 
+            <div [hidden]="quote_author.valid || quote_author.pristine" class="alert alert-danger">
+                <p>Write quote</p>
             </div>
-            <div class="row">
-                <label for="submitter">Quote submitter:</label>
-                <input type="text" class="form-control" id="submitter" required>
-
+        </div>
+        <div class="row">
+            <label for="submitter">Quote submitter:</label>
+            <input type="text" class="form-control" id="submitter" required [(ngModel)]="newQuote.quote_submitter"
+                name="quote_author" #quote_submitter='ngModel'>
+            <div [hidden]="quote_submitter.valid || quote_submitter.pristine" class="alert alert-danger">
+                <p>Write quote submitter</p>
             </div>
 
         </div>
 
-        <button class="btn btn-primary" type="submit">Save</button>
+
+
+        <button class="btn btn-primary" type="submit">Add quote</button>
 
     </form>
 </div>
-
-
-<!-- <input type="text" required class="form-control" id="name" [(ngModel)]="newGoal.name" name="name"> -->

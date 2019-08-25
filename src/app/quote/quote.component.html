@@ -1,15 +1,36 @@
-<div>
+<!-- <div>
     <h1>AWESOME QUOTES HERE!</h1>
     <ul>
         <div *ngFor='let quote of quotes; let i=index'>
             <li> {{quote.quote_name}} </li>
-            <button (click)='toggleDetails(i)'>Quote Details</button>
-            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
-            
+            <button (click)='toggleDetails(i)' class="btn btn-primary">Quote Details</button>
+            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-detail>
+
         </div>
     </ul>
+</div> -->
+
+
+
+<div class="container">
+    <h1>AWESOME QUOTES HERE!</h1>
+    <div class="row">
+        <ul>
+            <div class="col-md-6">
+                <div *ngFor='let quote of quotes; let i=index'>
+                    <li> {{quote.quote_name}} </li>
+                    <div>
+                        <button (click)='toggleDetails(i)' class="btn btn-success">Quote Details</button>
+                    </div>
+
+                    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-detail>
+                </div>
+
+            </div>
+
+        </ul>
+
+
+
+    </div>
 </div>
-
-
-
-<app-goal-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-goal-detail>

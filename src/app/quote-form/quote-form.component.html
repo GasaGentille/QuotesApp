@@ -1,9 +1,9 @@
 <div class="container-fluid">
-    <form>
+    <form #quoteForm='ngForm'>
         <div class="form-row">
             <div class="row">
                 <label for="quote">Write your quote:</label>
-                <textarea type="text" class="form-control" id="quote" required></textarea>
+                <textarea type="text" class="form-control" id="quote" required [(ngModel)]="newQuote.quote_name" name="quote_name"></textarea>
 
             </div>
             <div class="row">
@@ -24,26 +24,5 @@
     </form>
 </div>
 
-<!-- <div class="container-fluid">
-        <h2 class="text-center">Create a new Goal</h2>
-        <hr>
-        <form>
-            <div class="form-group">
-      
-                <label for="name">Name</label>
-                <input type="text" required class="form-control" id="name">
-      
-            </div>
-            <div class="form-group">
-      
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="4" required></textarea>
-      
-            </div>
-            <div class="form-group">
-                <label for="complete">Completion</label>
-                <input type='date' id="complete" required>
-      
-            </div>
-        </form>
-      </div> -->
+
+<input type="text" required class="form-control" id="name" [(ngModel)]="newGoal.name" name="name">

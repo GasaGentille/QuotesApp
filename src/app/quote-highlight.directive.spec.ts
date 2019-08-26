@@ -6,3 +6,5 @@ describe('QuoteHighlightDirective', () => {
     expect(directive).toBeTruthy();
   });
 });
+
+

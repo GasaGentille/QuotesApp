@@ -1,6 +1,18 @@
 # Quotes Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+This project was generated Using angular and it displays some quotes, Allows user to add quotes he wants, delete a quote like and dislike quotes and also view upvotes and downvotes the quote has. 
+
+## Installation of the application
+  we install this application by running the following commands in Terminal CLI:
+  1.$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash : node version manager install
+  2.$ nvm install node : Node install
+  3.$ sudo npm install -g @angular/cli : Angular installation
+  4.$ sudo npm install -g typescript : Typescript install
+
+  ## link to the deployed website
+   Link to repository: https://github.com/GasaGentille/QuotesApp
+   Deployed link : https://gasagentille.github.io/QuotesApp/
+
 
 ## Development server
 
@@ -27,5 +39,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## copyright and license information
-   copyright@,2019 Quotes project
-
+  Copyright (c) 2019 **Gentille, Moringa Rwanda** 

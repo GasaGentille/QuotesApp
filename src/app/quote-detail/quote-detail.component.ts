@@ -15,14 +15,14 @@ export class QuoteDetailComponent implements OnInit {
     this.isComplete.emit(complete);
   }
   
-  like=0;
-  quoteUpvotes(){
-    this.like++;
-  }
-  dislike=0;
-  quoteDownvotes(){
-    this.dislike++;
-  }
+  // like=0;
+  // quoteUpvotes(){
+  //   this.like++;
+  // }
+  // dislike=0;
+  // quoteDownvotes(){
+  //   this.dislike++;
+  // }
 
 
   

@@ -38,6 +38,12 @@ export class QuoteComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
+  upvote(i){
+    this.quotes[i].upvotes+=1
+}
+downvote(i){
+  this.quotes[i].downvotes+=1
+}
   highestUpvote() {
     this.preNum = 0
     this.lastNum = 0

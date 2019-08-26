@@ -2,12 +2,19 @@
 
     <div class="row">
         <ul>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div *ngFor='let quote of quotes; let i=index'>
-                    <li> {{quote.quote_name}} </li>
+                    
                     <div>
+                        <p appQuoteHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote_name}}</p>
+                        <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote_name}}</p>
+                       
                         <button (click)='toggleDetails(i)' class="btn btn-success">Quote Details</button>
+                        <p>{{quote.upvotes}} upvotes</p>
+                        <p>{{quote.downvotes}} downvotes</p>
 
+                        <button class="btn btn-primary" (click)="upvote(i)">Upvote</button>
+                        <button class="btn btn-danger" (click)="downvote(i)">Downvote</button>
                     </div>
 
 
@@ -18,11 +25,11 @@
 
         </ul>
 
-        <div class="col-md-4">
+        <div>
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
     </div>
 </div>
 <div class="footer">
-        <p>Copyright (c) 2019 **Gentille, Moringa Rwanda** </p>
-    </div>
+    <p>Copyright (c) 2019 **Gentille, Moringa Rwanda** </p>
+</div>
